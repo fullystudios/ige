@@ -1018,7 +1018,6 @@ var IgeEngine = IgeEntity.extend({
 
 		// Add fallback description for browsers and search engines not supporting canvas
 		tempCanvas.innerHTML = 'Papricaklubben är ICA Kvantums klubb för alla barn mellan 3 och 12 år. Upptäck en värld full av frukt, grönt, spel och matnyttig fakta.';
-		console.log(tempCanvas);
 
 		this.canvas(tempCanvas, autoSize);
 		document.body.appendChild(tempCanvas);
