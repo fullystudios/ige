@@ -27,11 +27,11 @@ var IgeEngine = IgeEntity.extend({
 		ige = this;
 
 		// Output our header
-		console.log('------------------------------------------------------------------------------');
-		console.log('* Powered by the Isogenic Game Engine ' + igeVersion + '                  *');
-		console.log('* (C)opyright ' + new Date().getFullYear() + ' Irrelon Software Limited                                  *');
-		console.log('* http://www.isogenicengine.com                                              *');
-		console.log('------------------------------------------------------------------------------');
+		// console.log('------------------------------------------------------------------------------');
+		// console.log('* Powered by the Isogenic Game Engine ' + igeVersion + '                  *');
+		// console.log('* (C)opyright ' + new Date().getFullYear() + ' Irrelon Software Limited                                  *');
+		// console.log('* http://www.isogenicengine.com                                              *');
+		// console.log('------------------------------------------------------------------------------');
 		
 		IgeEntity.prototype.init.call(this);
 
@@ -1015,6 +1015,10 @@ var IgeEngine = IgeEntity.extend({
 
 		// Set the canvas element id
 		tempCanvas.id = 'igeFrontBuffer';
+
+		// Add fallback description for browsers and search engines not supporting canvas
+		tempCanvas.innerHTML = 'Papricaklubben är ICA Kvantums klubb för alla barn mellan 3 och 12 år. Upptäck en värld full av frukt, grönt, spel och matnyttig fakta.';
+		console.log(tempCanvas);
 
 		this.canvas(tempCanvas, autoSize);
 		document.body.appendChild(tempCanvas);
